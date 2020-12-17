@@ -1,28 +1,18 @@
-== README
+Hello Esteemed Hiring Manager!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A few notes about what I did for this…
 
-Things you may want to cover:
+The root directory for this submission is a ruby on rails application.
 
-* Ruby version
+There is a view that when run, uses the Yelp API to first get the business ID for Bryant’s Cocktail Lounge  and then second uses the business ID to get the top 3 reviews for Bryant’s and populates them into the database. After that, I called up the associated json view that’s automatically built in to the Ruby on Rails framework within every model and the json was generated from the data in the database for the Review model. The code to do this primarily runs in the Reviews controller.
 
-* System dependencies
+The free Yelp API is limited to 3 reviews. I assume you could pay Yelp to get access to something that gets all the reviews.
 
-* Configuration
+To overcome this, I spent some time looking into a Selenium integration in order to scrape all of the reviews. I didn’t do this because, the markup for the review page is very complex and would have taken me more than the allotted 3 hours to figure out how to unambiguously parse. In addition, screen scraping is wildly susceptible to Yelp changing up their business page markup and would break very easily.
 
-* Database creation
+If I were working for you and I was doing this as part of my job, I would strongly recommend against doing this by scraping because it would require a code update every time Yelp changed their views such that the markup was different enough to break the unambiguous parsing code. I would instead recommend that you buy access to getting more than 3 reviews per API call and then move on with life from there.
 
-* Database initialization
+Note: User location was not something that was in Yelps Review API so I left that out even though it was asked for. This might be something that could be updated to be scraped later since this is a piece of data that’s unlikely to change and can be stored once if we cared to store such user data.
 
-* How to run the test suite
+Note: I did provide more data per record than was asked for but when other applications use the data, they will have to parse the needed parts of the JSON out anyways. Doing this with all of the data means that we have more data options later should they be required.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
