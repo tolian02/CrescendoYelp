@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  review_id: MyString
+  review_rating: 1
+  user_id: MyString
+  user_profile_url: MyString
+  user_image_url: MyString
+  user_name: MyString
+  review_text: MyText
+  review_time_created: 2020-12-16 20:27:33
+  review_url: MyString
+
+two:
+  review_id: MyString
+  review_rating: 1
+  user_id: MyString
+  user_profile_url: MyString
+  user_image_url: MyString
+  user_name: MyString
+  review_text: MyText
+  review_time_created: 2020-12-16 20:27:33
+  review_url: MyString
